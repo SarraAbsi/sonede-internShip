@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+@import "./request";
+@import "./control-panel";
+@import "./requests.db";
+@import "./rec";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    height: 100vh;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    margin-top: 7rem;
+}
+.master-container{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+.description{
+    max-width: 40%;
+    min-width: 400px;
+    background-color: #00A8FF;
+    position: relative;
+    .sonede{
+        color: #fff;
+        h3{
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+        p{
+            font-size: 1.4rem;
+            margin-top: 5rem;
+            font-weight: 200;
+            max-width: 90%;
+        }
+    }
+    .sonede-logo{
+        img{
+            position: absolute;
+            top: 50%;
+            right: -100px;
+            transform: translateY(-50%);
+            width: 12rem;
+        }
+    }
+}
+.login-panel{
+    width: 100%;
+    margin-left: 4rem;
+    height: 100%;
+    .heading{
+        font-size: 3rem;
+        color: #2d3436;
+        font-weight: 200;
+        text-align: left;
+        span{
+            font-weight: 100;
+        }
+    }
+    
+    .flex{
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 210px;
+        input{
+            padding: 1rem;
+            width: 100%;
+            border: 2px solid #00A8FF;
+            background-color: #fff;
+            color: #00A8FF;
+            border-radius: .3rem;
+            font-size: 1rem;
+        }
+        .submit{
+            background-color: #00A8FF;
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+    
+}
+.error-label{
+    width: 100%;
+    background-color: #F8D7DA;
+    color: #721C24;
+    padding: .5rem;
+    margin-top: 1rem;
+}
+.success-label{
+    width: 100%;
+    background-color: #D4EDDA;
+    color: #155724;
+    padding: .5rem;
+    margin-top: 1rem;
+}
+.signup-label{
+    display: block;
+    color: #2d3436;
+    padding-top: 1rem;
+    span{
+        a{
+            text-decoration: none;
+            color: #00A8FF;
+        }
+    }
+}
+
+// reclamation
+
+#reclamation-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    form{
+        width: 500px;
+        padding: 1rem;
+        background-color: #FAFAFA;
+        box-shadow: 0 1px 6px 1px rgba(0, 0, 0 ,.3);
+        input{
+            font-size: 1.2rem;
+            padding: .3rem 1rem;
+            background-color: #eeeeee;
+            border: none;
+            display: block;
+        }
+        textarea{
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            resize: none;
+            margin-bottom: 1rem;
+        }
+        input[type="submit"]{
+            width: 100%;
+            background-color: #28A745;
+            color: #fff;
+            cursor: pointer;
+        }
+        select{
+            width: 100%;
+            padding: .3rem 1rem;
+            margin: 1rem 0;
+        }
+    }
+}
+
+
+.recs-grid{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
+    .reclamation{
+        padding: 1rem;
+        background-color: #FAFAFA;
+        input{
+            display: block;
+            width: 100%;
+            padding: .3rem 1rem;
+            border: none;
+            margin: .5rem 0;
+        }
+        .rec-accept{
+            width: 40%;
+            display: inline-block;
+            background-color: #28A745;
+            color: #fff;
+        }
+        .rec-decline{
+            width: 40%;
+            display: inline-block;
+            background-color: #e55039;
+            color: #fff;
+        }
+        textarea{
+            resize: none;
+        }
+    }
+}
